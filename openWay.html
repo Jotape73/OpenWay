@@ -357,6 +357,14 @@
     align-items: center;
   }
 
+  .about.about-reverse .about-grid {
+    direction: rtl;
+  }
+
+  .about.about-reverse .about-grid > div {
+    direction: ltr;
+  }
+
   .about-img-wrap {
     position: relative;
   }
@@ -369,6 +377,24 @@
     display: flex;
     align-items: flex-end;
     padding: 2rem;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .about-img-placeholder img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+    z-index: 0;
+  }
+
+  .about-img-tag {
+    position: relative;
+    z-index: 1;
   }
 
   .about-img-tag {
@@ -986,26 +1012,27 @@
     <div class="about-grid">
       <div class="about-img-wrap">
         <div class="about-img-placeholder">
+          <img src="images/ufabc.png" alt="UFABC">
           <div class="about-img-tag">UFABC</div>
         </div>
         <div class="about-float-card">
           <div class="num">+100</div>
-          <div class="txt">Clientes clientes consultados</div>
+          <div class="txt">Clientes consultados</div>
         </div>
       </div>
       <div class="about-content">
         <span class="section-eyebrow">Sobre a OpenWay</span>
         <h2 class="section-title">Um projeto focado em <em>abrir caminhos</em></h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
-        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa.</p>
+        <p>Somos um grupo de estudantes da UFABC unidos por um objetivo: transformar um desafio acadêmico em uma solução real.</p>
+        <p>Desenvolvemos um produto inovador, desenhado para ser útil e disruptivo, focado em entregar valor e praticidade para um mercado que ainda possui uma grande defasagem nessa área.</p>
         <div class="about-pillars">
           <div class="pillar">
             <div class="pillar-icon">
               <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
             </div>
             <div class="pillar-text">
-              <h4>1</h4>
-              <p>Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
+              <h4>UFABC</h4>
+              <p>Projeto feito por alunos da Universidade Federal do ABC</p>
             </div>
           </div>
           <div class="pillar">
@@ -1013,8 +1040,8 @@
               <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
             </div>
             <div class="pillar-text">
-              <h4>2</h4>
-              <p>Adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
+              <h4>Inovação</h4>
+              <p>Um projeto focado em criar soluções inovadoras para problemas reais</p>
             </div>
           </div>
           <div class="pillar">
@@ -1022,8 +1049,8 @@
               <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
             </div>
             <div class="pillar-text">
-              <h4>3</h4>
-              <p>Magna aliqua ut enim ad minim veniam quis nostrud exercitation ullamco.</p>
+              <h4>Parcerias</h4>
+              <p>Um projeto construído em parceria com o Maps e Waze</p>
             </div>
           </div>
         </div>
@@ -1038,46 +1065,137 @@
     <div class="services-header">
       <div>
         <span class="section-eyebrow">O que fazemos</span>
-        <h2 class="section-title">Soluções que <em>transformam</em></h2>
+        <h2 class="section-title">Como que<em> surgiu ?</em></h2>
+        <!--
+          </div>
+          <a href="#contact" class="btn-outline" style="color: var(--mid-purple); border-color: var(--mid-purple);">Ver todos</a>
+          </div>
+        -->
+        <div class="services-grid">
+          <div class="service-card">
+            <div class="service-num">01</div>
+            <h3>O ínicio</h3>
+            <p>O projeto nasceu do desejo de transformar uma dificuldade cotidiana em uma solução prática e acessível.</p>
+            <a href="#" class="service-link">Saiba mais →</a>
+          </div>
+          <div class="service-card">
+            <div class="service-num">02</div>
+            <h3>O produto</h3>
+            <p>Buscamos um produto viável para o mercado, mas cujo propósito central fosse a inclusão, oferecendo mais autonomia e segurança para pessoas com deficiência em seus deslocamentos diários. </p>
+            <a href="#" class="service-link">Saiba mais →</a>
+          </div>
+          <div class="service-card">
+            <div class="service-num">03</div>
+            <h3>Mobilidade</h3>
+            <p>Após uma extensa pesquisa, desenvolvemos esta solução inovadora: um dispositivo que atua como um importante facilitador de mobilidade urbana, promovendo a acessibilidade e a praticidade para todos os usuários.</p>
+            <a href="#" class="service-link">Saiba mais →</a>
+          </div>
       </div>
-      <a href="#contact" class="btn-outline" style="color: var(--mid-purple); border-color: var(--mid-purple);">Ver todos</a>
     </div>
-    <div class="services-grid">
-      <div class="service-card">
-        <div class="service-num">01</div>
-        <h3>Lorem Ipsum Consulting</h3>
-        <p>Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam quis nostrud.</p>
-        <a href="#" class="service-link">Saiba mais →</a>
+  </div>
+</section>
+
+<!-- ABOUT 2 -->
+<section class="about about-reverse">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-img-wrap">
+        <div class="about-img-placeholder">
+          <img src="images/ufabc.png" alt="UFABC">
+          <div class="about-img-tag">UFABC</div>
+        </div>
+        <div class="about-float-card">
+          <div class="num">+100</div>
+          <div class="txt">Clientes consultados</div>
+        </div>
       </div>
-      <div class="service-card">
-        <div class="service-num">02</div>
-        <h3>Dolor Sit Amet Strategy</h3>
-        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat.</p>
-        <a href="#" class="service-link">Saiba mais →</a>
+      <div class="about-content">
+        <span class="section-eyebrow">Sobre a OpenWay</span>
+        <h2 class="section-title">Um projeto focado em <em>abrir caminhos</em></h2>
+        <p>Somos um grupo de estudantes da UFABC unidos por um objetivo: transformar um desafio acadêmico em uma solução real.</p>
+        <p>Desenvolvemos um produto inovador, desenhado para ser útil e disruptivo, focado em entregar valor e praticidade para um mercado que ainda possui uma grande defasagem nessa área.</p>
+        <div class="about-pillars">
+          <div class="pillar">
+            <div class="pillar-icon">
+              <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+            </div>
+            <div class="pillar-text">
+              <h4>UFABC</h4>
+              <p>Projeto feito por alunos da Universidade Federal do ABC</p>
+            </div>
+          </div>
+          <div class="pillar">
+            <div class="pillar-icon">
+              <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+            </div>
+            <div class="pillar-text">
+              <h4>Inovação</h4>
+              <p>Um projeto focado em criar soluções inovadoras para problemas reais</p>
+            </div>
+          </div>
+          <div class="pillar">
+            <div class="pillar-icon">
+              <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            </div>
+            <div class="pillar-text">
+              <h4>Parcerias</h4>
+              <p>Um projeto construído em parceria com o Maps e Waze</p>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="service-card">
-        <div class="service-num">03</div>
-        <h3>Magna Aliqua Solutions</h3>
-        <p>Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat duis aute irure dolor in reprehenderit.</p>
-        <a href="#" class="service-link">Saiba mais →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT 3 -->
+<section class="about">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-img-wrap">
+        <div class="about-img-placeholder">
+          <img src="images/ufabc.png" alt="UFABC">
+          <div class="about-img-tag">UFABC</div>
+        </div>
+        <div class="about-float-card">
+          <div class="num">+100</div>
+          <div class="txt">Clientes consultados</div>
+        </div>
       </div>
-      <div class="service-card">
-        <div class="service-num">04</div>
-        <h3>Adipiscing Digital Growth</h3>
-        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium totam rem aperiam eaque.</p>
-        <a href="#" class="service-link">Saiba mais →</a>
-      </div>
-      <div class="service-card">
-        <div class="service-num">05</div>
-        <h3>Incididunt Technology</h3>
-        <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit sed quia consequuntur magni dolores eos qui ratione.</p>
-        <a href="#" class="service-link">Saiba mais →</a>
-      </div>
-      <div class="service-card">
-        <div class="service-num">06</div>
-        <h3>Ut Labore Innovation</h3>
-        <p>Neque porro quisquam est qui dolorem ipsum quia dolor sit amet consectetur adipisci velit sed quia non numquam eius modi tempora.</p>
-        <a href="#" class="service-link">Saiba mais →</a>
+      <div class="about-content">
+        <span class="section-eyebrow">Sobre a OpenWay</span>
+        <h2 class="section-title">Um projeto focado em <em>abrir caminhos</em></h2>
+        <p>Somos um grupo de estudantes da UFABC unidos por um objetivo: transformar um desafio acadêmico em uma solução real.</p>
+        <p>Desenvolvemos um produto inovador, desenhado para ser útil e disruptivo, focado em entregar valor e praticidade para um mercado que ainda possui uma grande defasagem nessa área.</p>
+        <div class="about-pillars">
+          <div class="pillar">
+            <div class="pillar-icon">
+              <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+            </div>
+            <div class="pillar-text">
+              <h4>UFABC</h4>
+              <p>Projeto feito por alunos da Universidade Federal do ABC</p>
+            </div>
+          </div>
+          <div class="pillar">
+            <div class="pillar-icon">
+              <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+            </div>
+            <div class="pillar-text">
+              <h4>Inovação</h4>
+              <p>Um projeto focado em criar soluções inovadoras para problemas reais</p>
+            </div>
+          </div>
+          <div class="pillar">
+            <div class="pillar-icon">
+              <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            </div>
+            <div class="pillar-text">
+              <h4>Parcerias</h4>
+              <p>Um projeto construído em parceria com o Maps e Waze</p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -1093,23 +1211,23 @@
     <div class="process-steps">
       <div class="step">
         <div class="step-circle">1</div>
-        <h4>Lorem Ipsum</h4>
-        <p>Consectetur adipiscing elit sed do eiusmod tempor incididunt.</p>
+        <h4>Ligar &amp; Conectar</h4>
+        <p>Ligar a pulseira e conectá-la ao app</p>
       </div>
       <div class="step">
         <div class="step-circle">2</div>
-        <h4>Dolor Sit Amet</h4>
-        <p>Ut labore et dolore magna aliqua enim ad minim veniam quis.</p>
+        <h4>Trajeto</h4>
+        <p>Definir o trajeto desejado no Maps ou Waze</p>
       </div>
       <div class="step">
         <div class="step-circle">3</div>
-        <h4>Consectetur Elit</h4>
-        <p>Nostrud exercitation ullamco laboris nisi ut aliquip ex ea.</p>
+        <h4>Começar</h4>
+        <p>Iniciar o trajeto com a ajuda da pulseira</p>
       </div>
       <div class="step">
         <div class="step-circle">4</div>
-        <h4>Magna Aliqua</h4>
-        <p>Commodo consequat duis aute irure dolor reprehenderit.</p>
+        <h4>Resultado</h4>
+        <p>Veja durante o trajeto a pulseira te ajudando a navegar com segurança</p>
       </div>
     </div>
   </div>
