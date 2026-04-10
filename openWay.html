@@ -152,7 +152,7 @@
 
   .hero h1 {
     font-family: 'Syne', sans-serif;
-    font-size: clamp(2.8rem, 5vw, 4.2rem);
+    font-size: clamp(2.5rem, 5vw, 3.8rem);
     font-weight: 800;
     color: var(--white);
     line-height: 1.1;
@@ -166,7 +166,7 @@
   }
 
   .hero p {
-    font-size: 1.1rem;
+    font-size: 1.05rem;
     line-height: 1.75;
     color: rgba(255,255,255,0.7);
     margin-bottom: 2.5rem;
@@ -290,20 +290,20 @@
   /* MARQUEE */
   .marquee-wrap {
     background: var(--teal);
-    padding: 1rem 0;
+    padding: 0.8rem 0;
     overflow: hidden;
   }
 
   .marquee-track {
     display: flex;
     gap: 3rem;
-    animation: marquee 20s linear infinite;
+    animation: marquee 25s linear infinite;
     white-space: nowrap;
   }
 
   .marquee-track span {
     font-family: 'Syne', sans-serif;
-    font-size: 0.85rem;
+    font-size: 0.8rem;
     font-weight: 600;
     color: var(--deep-purple);
     letter-spacing: 0.1em;
@@ -319,27 +319,30 @@
   }
 
   /* SECTIONS COMMON */
-  section { padding: 6rem 4rem; }
+  section { padding: 5.5rem 4rem; }
+
+  section h2 { margin-bottom: 0; }
 
   .container { max-width: 1200px; margin: 0 auto; }
 
   .section-eyebrow {
-    font-size: 0.78rem;
-    font-weight: 500;
+    font-size: 0.75rem;
+    font-weight: 600;
     letter-spacing: 0.15em;
     text-transform: uppercase;
     color: var(--teal-dark);
-    margin-bottom: 0.75rem;
+    margin-bottom: 1rem;
     display: block;
   }
 
   .section-title {
     font-family: 'Syne', sans-serif;
-    font-size: clamp(2rem, 4vw, 2.8rem);
+    font-size: clamp(1.75rem, 4vw, 2.5rem);
     font-weight: 700;
     color: var(--text-dark);
-    line-height: 1.15;
-    letter-spacing: -0.025em;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.5rem;
   }
 
   .section-title em {
@@ -435,7 +438,7 @@
 
   .about-content p {
     color: var(--text-muted);
-    font-size: 1rem;
+    font-size: 0.95rem;
     line-height: 1.8;
     margin-top: 1.5rem;
     font-weight: 300;
@@ -444,14 +447,14 @@
   .about-pillars {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
-    margin-top: 2rem;
+    gap: 1.5rem;
+    margin-top: 2.5rem;
   }
 
   .pillar {
     display: flex;
     align-items: flex-start;
-    gap: 1rem;
+    gap: 1.5rem;
   }
 
   .pillar-icon {
@@ -470,16 +473,16 @@
   .pillar-text h4 {
     font-family: 'Syne', sans-serif;
     font-size: 0.95rem;
-    font-weight: 600;
+    font-weight: 700;
     color: var(--text-dark);
-    margin-bottom: 0.2rem;
+    margin-bottom: 0.3rem;
   }
 
   .pillar-text p {
-    font-size: 0.87rem;
+    font-size: 0.85rem;
     color: var(--text-muted);
     margin: 0;
-    line-height: 1.6;
+    line-height: 1.55;
   }
 
   /* SERVICES */
@@ -487,22 +490,23 @@
 
   .services-header {
     display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-    margin-bottom: 3.5rem;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 3rem;
   }
 
   .services-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 1.5rem;
+    gap: 2rem;
   }
 
   .service-card {
     background: var(--off-white);
-    border-radius: 20px;
+    border: 1px solid #E8E0F5;
+    border-radius: 16px;
     padding: 2rem;
-    transition: transform 0.25s, box-shadow 0.25s;
+    transition: transform 0.25s, box-shadow 0.25s, border-color 0.25s;
     cursor: default;
     position: relative;
     overflow: hidden;
@@ -512,41 +516,43 @@
     content: '';
     position: absolute;
     top: 0; left: 0; right: 0;
-    height: 3px;
+    height: 2px;
     background: linear-gradient(90deg, var(--teal), var(--mid-purple));
     opacity: 0;
     transition: opacity 0.25s;
   }
 
   .service-card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 20px 50px rgba(45,27,105,0.1);
+    transform: translateY(-4px);
+    box-shadow: 0 12px 40px rgba(45,27,105,0.1);
+    border-color: var(--teal);
   }
 
   .service-card:hover::before { opacity: 1; }
 
   .service-num {
     font-family: 'Syne', sans-serif;
-    font-size: 0.75rem;
+    font-size: 0.72rem;
     font-weight: 700;
     letter-spacing: 0.1em;
     color: var(--teal-dark);
     margin-bottom: 1rem;
+    text-transform: uppercase;
   }
 
   .service-card h3 {
     font-family: 'Syne', sans-serif;
-    font-size: 1.2rem;
+    font-size: 1.05rem;
     font-weight: 700;
     color: var(--text-dark);
-    margin-bottom: 0.75rem;
+    margin-bottom: 0.6rem;
     line-height: 1.3;
   }
 
   .service-card p {
-    font-size: 0.9rem;
+    font-size: 0.88rem;
     color: var(--text-muted);
-    line-height: 1.7;
+    line-height: 1.6;
     font-weight: 300;
   }
 
@@ -555,8 +561,8 @@
     align-items: center;
     gap: 0.4rem;
     margin-top: 1.25rem;
-    font-size: 0.85rem;
-    font-weight: 500;
+    font-size: 0.82rem;
+    font-weight: 700;
     color: var(--mid-purple);
     text-decoration: none;
     transition: gap 0.2s;
@@ -574,15 +580,21 @@
   .testi-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 1.5rem;
+    gap: 2rem;
     margin-top: 3rem;
   }
 
   .testi-card {
     background: rgba(255,255,255,0.06);
     border: 1px solid rgba(255,255,255,0.1);
-    border-radius: 20px;
+    border-radius: 16px;
     padding: 2rem;
+    transition: transform 0.25s, box-shadow 0.25s;
+  }
+
+  .testi-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 40px rgba(45,27,105,0.15);
   }
 
   .testi-stars {
@@ -599,9 +611,9 @@
   }
 
   .testi-card p {
-    font-size: 0.95rem;
+    font-size: 0.9rem;
     color: rgba(255,255,255,0.75);
-    line-height: 1.75;
+    line-height: 1.7;
     font-weight: 300;
     font-style: italic;
     margin-bottom: 1.5rem;
@@ -655,17 +667,17 @@
 
   .cta-band h2 {
     font-family: 'Syne', sans-serif;
-    font-size: clamp(2rem, 4vw, 2.6rem);
+    font-size: clamp(1.8rem, 4vw, 2.4rem);
     font-weight: 800;
     color: var(--deep-purple);
-    letter-spacing: -0.025em;
+    letter-spacing: -0.02em;
     margin-bottom: 1rem;
     line-height: 1.15;
   }
 
   .cta-band p {
     color: rgba(45,27,105,0.7);
-    font-size: 1.05rem;
+    font-size: 1rem;
     margin-bottom: 2rem;
     font-weight: 300;
   }
@@ -736,8 +748,8 @@
 
   .step h4 {
     font-family: 'Syne', sans-serif;
-    font-size: 1rem;
-    font-weight: 600;
+    font-size: 0.95rem;
+    font-weight: 700;
     color: var(--text-dark);
     margin-bottom: 0.5rem;
   }
@@ -745,7 +757,7 @@
   .step p {
     font-size: 0.85rem;
     color: var(--text-muted);
-    line-height: 1.6;
+    line-height: 1.55;
     font-weight: 300;
   }
 
@@ -760,7 +772,7 @@
   }
 
   .contact-info p {
-    font-size: 1rem;
+    font-size: 0.95rem;
     color: var(--text-muted);
     line-height: 1.8;
     margin-top: 1.25rem;
@@ -778,7 +790,7 @@
     display: flex;
     align-items: center;
     gap: 0.75rem;
-    font-size: 0.95rem;
+    font-size: 0.9rem;
     color: var(--text-dark);
   }
 
@@ -809,8 +821,8 @@
   }
 
   .form-field label {
-    font-size: 0.82rem;
-    font-weight: 500;
+    font-size: 0.8rem;
+    font-weight: 600;
     color: var(--text-muted);
     letter-spacing: 0.03em;
   }
@@ -822,7 +834,7 @@
     border: 1.5px solid #E8E0F5;
     border-radius: 10px;
     font-family: 'DM Sans', sans-serif;
-    font-size: 0.95rem;
+    font-size: 0.9rem;
     color: var(--text-dark);
     background: var(--off-white);
     transition: border-color 0.2s;
@@ -864,7 +876,7 @@
 
   .footer-brand p {
     margin-top: 0.75rem;
-    font-size: 0.87rem;
+    font-size: 0.85rem;
     color: rgba(255,255,255,0.4);
     max-width: 260px;
     line-height: 1.6;
@@ -889,7 +901,7 @@
   .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 0.6rem; }
 
   .footer-col a {
-    font-size: 0.88rem;
+    font-size: 0.85rem;
     color: rgba(255,255,255,0.5);
     text-decoration: none;
     transition: color 0.2s;
@@ -907,8 +919,210 @@
   }
 
   .footer-bottom p {
-    font-size: 0.8rem;
+    font-size: 0.78rem;
     color: rgba(255,255,255,0.25);
+  }
+
+  /* COMPONENTS */
+  .components { background: var(--white); }
+
+  .components-tabs {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2.5rem;
+    border-bottom: 2px solid #E8E0F5;
+    flex-wrap: wrap;
+  }
+
+  .tab-btn {
+    padding: 0.9rem 1.5rem;
+    background: none;
+    border: none;
+    font-family: 'Syne', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--text-muted);
+    cursor: pointer;
+    position: relative;
+    transition: color 0.25s;
+    border-bottom: 3px solid transparent;
+  }
+
+  .tab-btn.active {
+    color: var(--teal-dark);
+    border-bottom-color: var(--teal);
+  }
+
+  .components-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-top: 2.5rem;
+  }
+
+  .comp-card {
+    background: var(--off-white);
+    border: 1px solid #E8E0F5;
+    border-radius: 16px;
+    padding: 2rem;
+    text-align: center;
+    transition: transform 0.25s, box-shadow 0.25s, border-color 0.25s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .comp-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 40px rgba(45,27,105,0.1);
+    border-color: var(--teal);
+  }
+
+  .comp-icon {
+    width: 55px;
+    height: 55px;
+    margin: 0 auto 1rem;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    flex-shrink: 0;
+  }
+
+  .comp-card h4 {
+    font-family: 'Syne', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 0.4rem;
+    line-height: 1.3;
+    min-height: 2.4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .comp-card .qty {
+    font-size: 0.72rem;
+    color: var(--teal-dark);
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  .comp-card p {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    line-height: 1.55;
+    margin: 0;
+  }
+
+  .comp-subtext {
+    font-size: 0.78rem;
+    background: rgba(78,207,179,0.12);
+    color: var(--teal-dark);
+    padding: 0.6rem;
+    border-radius: 8px;
+    margin-top: 0.75rem;
+    line-height: 1.5;
+  }
+
+  /* CONSTRUCTION PHASES */
+  .phases-container {
+    margin-top: 4rem;
+  }
+
+  .phases-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    margin-top: 2.5rem;
+  }
+
+  .phase-card {
+    background: var(--off-white);
+    border: 1px solid #E8E0F5;
+    border-radius: 16px;
+    padding: 2rem;
+    text-align: center;
+    position: relative;
+    transition: all 0.25s;
+  }
+
+  .phase-card:hover {
+    border-color: var(--teal);
+    transform: translateY(-4px);
+    box-shadow: 0 12px 40px rgba(45,27,105,0.1);
+  }
+
+  .phase-num {
+    font-family: 'Syne', sans-serif;
+    font-size: 2rem;
+    font-weight: 800;
+    background: linear-gradient(135deg, var(--teal), var(--mid-purple));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 0.5rem;
+  }
+
+  .phase-card h4 {
+    font-family: 'Syne', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 0.75rem;
+  }
+
+  .phase-card p {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    line-height: 1.55;
+    margin: 0;
+  }
+
+  /* SPECS */
+  .specs-section {
+    background: linear-gradient(135deg, var(--deep-purple) 0%, var(--mid-purple) 100%);
+    border-radius: 20px;
+    padding: 2.5rem;
+    margin-top: 4rem;
+    color: var(--white);
+  }
+
+  .specs-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+
+  .spec-item {
+    text-align: center;
+  }
+
+  .spec-value {
+    font-family: 'Syne', sans-serif;
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--teal-light);
+    margin-bottom: 0.5rem;
+  }
+
+  .spec-label {
+    font-size: 0.9rem;
+    color: rgba(255,255,255,0.7);
+    font-weight: 300;
+  }
+
+  .tab-content { display: none; animation: fadeIn 0.3s ease-in; }
+  .tab-content.active { display: block; }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
   }
 
   @media (max-width: 900px) {
@@ -917,7 +1131,11 @@
     section { padding: 4rem 1.5rem; }
     .hero { padding: 6rem 1.5rem 4rem; }
     .hero-grid, .about-grid, .contact-grid { grid-template-columns: 1fr; gap: 2.5rem; }
-    .services-grid, .testi-grid { grid-template-columns: 1fr; }
+    .services-grid, .testi-grid, .components-grid { grid-template-columns: 1fr; }
+    .comp-icon { width: 50px; height: 50px; font-size: 1.5rem; }
+    .comp-card h4 { min-height: auto; }
+    .phases-grid { grid-template-columns: 1fr 1fr; }
+    .specs-grid { grid-template-columns: 1fr; }
     .process-steps { grid-template-columns: 1fr 1fr; }
     .process-steps::before { display: none; }
     footer { padding: 3rem 1.5rem 1.5rem; }
@@ -927,6 +1145,8 @@
     .about-float-card { right: 0; top: 1rem; }
     .cta-band { padding: 4rem 1.5rem; }
     .form-row { grid-template-columns: 1fr; }
+    .components-tabs { gap: 0.5rem; }
+    .tab-btn { padding: 0.75rem 1rem; font-size: 0.85rem; }
   }
 </style>
 </head>
@@ -939,7 +1159,7 @@
     <li><a href="#about">Sobre</a></li>
     <li><a href="#services">Serviços</a></li>
     <li><a href="#process">Como Funciona</a></li>
-    <li><a href="#testimonials">Depoimentos</a></li>
+    <li><a href="#components">Componentes</a></li>
     <li><a href="#contact" class="nav-cta">Fale Conosco</a></li>
   </ul>
 </nav>
@@ -1062,34 +1282,27 @@
 <!-- SERVICES -->
 <section class="services" id="services">
   <div class="container">
-    <div class="services-header">
-      <div>
-        <span class="section-eyebrow">O que fazemos</span>
-        <h2 class="section-title">Como que<em> surgiu ?</em></h2>
-        <!--
-          </div>
-          <a href="#contact" class="btn-outline" style="color: var(--mid-purple); border-color: var(--mid-purple);">Ver todos</a>
-          </div>
-        -->
-        <div class="services-grid">
-          <div class="service-card">
-            <div class="service-num">01</div>
-            <h3>O ínicio</h3>
-            <p>O projeto nasceu do desejo de transformar uma dificuldade cotidiana em uma solução prática e acessível.</p>
-            <a href="#" class="service-link">Saiba mais →</a>
-          </div>
-          <div class="service-card">
-            <div class="service-num">02</div>
-            <h3>O produto</h3>
-            <p>Buscamos um produto viável para o mercado, mas cujo propósito central fosse a inclusão, oferecendo mais autonomia e segurança para pessoas com deficiência em seus deslocamentos diários. </p>
-            <a href="#" class="service-link">Saiba mais →</a>
-          </div>
-          <div class="service-card">
-            <div class="service-num">03</div>
-            <h3>Mobilidade</h3>
-            <p>Após uma extensa pesquisa, desenvolvemos esta solução inovadora: um dispositivo que atua como um importante facilitador de mobilidade urbana, promovendo a acessibilidade e a praticidade para todos os usuários.</p>
-            <a href="#" class="service-link">Saiba mais →</a>
-          </div>
+    <span class="section-eyebrow">O que fazemos</span>
+    <h2 class="section-title">Como que<em> surgiu ?</em></h2>
+    
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-num">01</div>
+        <h3>O ínicio</h3>
+        <p>O projeto nasceu do desejo de transformar uma dificuldade cotidiana em uma solução prática e acessível.</p>
+        <a href="#" class="service-link">Saiba mais →</a>
+      </div>
+      <div class="service-card">
+        <div class="service-num">02</div>
+        <h3>O produto</h3>
+        <p>Buscamos um produto viável para o mercado, mas cujo propósito central fosse a inclusão, oferecendo mais autonomia e segurança para pessoas com deficiência em seus deslocamentos diários. </p>
+        <a href="#" class="service-link">Saiba mais →</a>
+      </div>
+      <div class="service-card">
+        <div class="service-num">03</div>
+        <h3>Mobilidade</h3>
+        <p>Após uma extensa pesquisa, desenvolvemos esta solução inovadora: um dispositivo que atua como um importante facilitador de mobilidade urbana, promovendo a acessibilidade e a praticidade para todos os usuários.</p>
+        <a href="#" class="service-link">Saiba mais →</a>
       </div>
     </div>
   </div>
@@ -1256,6 +1469,248 @@
         <p>Veja durante o trajeto a pulseira te ajudando a navegar com segurança</p>
       </div>
     </div>
+
+    <!-- FLUXO DE FUNCIONAMENTO -->
+    <div style="background: var(--off-white); border-radius: 16px; padding: 2rem; margin-top: 2rem; border-left: 4px solid var(--teal); overflow-x: auto;">
+      <h3 style="font-family: 'Syne', sans-serif; color: var(--text-dark); margin-bottom: 2rem; font-size: 1.1rem; font-weight: 700;">🔄 Fluxo de Funcionamento</h3>
+      <div style="display: flex; align-items: center; gap: 1rem; white-space: nowrap; min-width: max-content;">
+        <div style="text-align: center; font-weight: 600; color: var(--mid-purple); font-size: 0.95rem; flex-shrink: 0;">📍 Google Maps</div>
+        <div style="color: var(--teal); font-size: 1.5rem; flex-shrink: 0;">➤</div>
+        <div style="text-align: center; font-weight: 600; color: var(--mid-purple); font-size: 0.95rem; flex-shrink: 0;">📱 Android captura notificação</div>
+        <div style="color: var(--teal); font-size: 1.5rem; flex-shrink: 0;">➤</div>
+        <div style="text-align: center; font-weight: 600; color: var(--mid-purple); font-size: 0.95rem; flex-shrink: 0;">🔍 Identifica: "Esquerda" ou "Direita"</div>
+        <div style="color: var(--teal); font-size: 1.5rem; flex-shrink: 0;">➤</div>
+        <div style="text-align: center; font-weight: 600; color: var(--mid-purple); font-size: 0.95rem; flex-shrink: 0;">📡 Envia comando BLE</div>
+        <div style="color: var(--teal); font-size: 1.5rem; flex-shrink: 0;">➤</div>
+        <div style="text-align: center; font-weight: 700; background: linear-gradient(135deg, var(--teal), var(--mid-purple)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; font-size: 0.95rem; flex-shrink: 0;">✨ Pulseira vibra!</div>
+      </div>
+
+      <!-- LEGENDA DOS COMANDOS BLE -->
+      <div style="margin-top: 2.5rem; padding-top: 2.5rem; border-top: 1px solid rgba(45, 27, 105, 0.1);">
+        <h4 style="font-family: 'Syne', sans-serif; color: var(--text-dark); margin-bottom: 1.5rem; font-size: 0.95rem; font-weight: 700;"> 📡 Comandos BLE</h4>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;">
+          <div style="background: var(--white); padding: 1.25rem; border-radius: 12px; border-left: 4px solid var(--teal);">
+            <div style="font-weight: 700; color: var(--teal); margin-bottom: 0.5rem; font-size: 0.9rem;">⬅️ Comando: LEFT</div>
+            <div style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.5;">Vibra pulseira esquerda — indica virada para esquerda</div>
+          </div>
+          <div style="background: var(--white); padding: 1.25rem; border-radius: 12px; border-left: 4px solid var(--mid-purple);">
+            <div style="font-weight: 700; color: var(--mid-purple); margin-bottom: 0.5rem; font-size: 0.9rem;">➡️ Comando: RIGHT</div>
+            <div style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.5;">Vibra pulseira direita — indica virada para direita</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COMPONENTS & BUILD -->
+<section class="components" id="components">
+  <div class="container">
+    <span class="section-eyebrow">Detalhes Técnicos</span>
+    <h2 class="section-title">Conheça os <em>componentes</em></h2>
+    
+    <!-- TABS -->
+    <div class="components-tabs">
+      <button class="tab-btn active" onclick="switchTab(event, 'eletrônicos')">🔌 Eletrônicos</button>
+      <button class="tab-btn" onclick="switchTab(event, 'ferramentas')">🔧 Ferramentas</button>
+      <button class="tab-btn" onclick="switchTab(event, 'software')">💻 Software</button>
+      <button class="tab-btn" onclick="switchTab(event, 'fases')">🏗️ Construção</button>
+    </div>
+
+    <!-- ELETRÔNICOS -->
+    <div id="eletrônicos" class="tab-content active">
+      <div class="components-grid">
+        <div class="comp-card">
+          <div class="comp-icon">🎮</div>
+          <h4>Microcontrolador</h4>
+          <div class="qty">ESP32 DevKit V1</div>
+          <p>Processador principal com Bluetooth BLE integrado, pequeno, barato e fácil de programar</p>
+        </div>
+        <div class="comp-card">
+          <div class="comp-icon">⚡</div>
+          <h4>Motor de Vibração</h4>
+          <div class="qty">Mini motor 3V–5V</div>
+          <p>Tipo moeda ou cilindro para criar os padrões de feedback tátil</p>
+        </div>
+        <div class="comp-card">
+          <div class="comp-icon">🔋</div>
+          <h4>Transistor (IMPORTANTE)</h4>
+          <div class="qty">NPN ou MOSFET</div>
+          <p>2N2222, BC337 ou IRLZ44N - Necessário pois ESP32 não aguenta ligar motor direto</p>
+        </div>
+        <div class="comp-card">
+          <div class="comp-icon">🛡️</div>
+          <h4>Diodo de Proteção</h4>
+          <div class="qty">Diodo 1N4007</div>
+          <p>Proteção contra retorno de corrente e circulação indesejada</p>
+        </div>
+        <div class="comp-card">
+          <div class="comp-icon">📊</div>
+          <h4>Resistores</h4>
+          <div class="qty">Resistor 1kΩ</div>
+          <p>Controlam corrente na base do transistor</p>
+        </div>
+        <div class="comp-card">
+          <div class="comp-icon">🔌</div>
+          <h4>Bateria LiPo</h4>
+          <div class="qty">3.7V 500mAh</div>
+          <p>Alimentação compacta e leve para a pulseira</p>
+        </div>
+        <div class="comp-card">
+          <div class="comp-icon">🔋</div>
+          <h4>Módulo de Carregamento</h4>
+          <div class="qty">TP4056</div>
+          <p>Permite carregar as baterias com proteção integrada</p>
+        </div>
+        <div class="comp-card">
+          <div class="comp-icon">📦</div>
+          <h4>Case/Estrutura</h4>
+          <p>Impressa em 3D, caixa plástica ou pulseira fitness reutilizada</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- FERRAMENTAS -->
+    <div id="ferramentas" class="tab-content">
+      <div class="components-grid">
+        <div class="comp-card">
+          <div class="comp-icon">🔨</div>
+          <h4>Ferro de Solda</h4>
+          <div class="qty">1x Equipamento</div>
+          <p>Para conexões de componentes seguras e confiáveis</p>
+        </div>
+        <div class="comp-card">
+          <div class="comp-icon">🌊</div>
+          <h4>Estanho</h4>
+          <div class="qty">1x Carretel</div>
+          <p>Material para soldagem de componentes eletrônicos</p>
+        </div>
+        <div class="comp-card">
+          <div class="comp-icon">📏</div>
+          <h4>Multímetro</h4>
+          <div class="qty">1x Equipamento</div>
+          <p>Essencial para testar e diagnosticar problemas</p>
+        </div>
+        <div class="comp-card">
+          <div class="comp-icon">🧩</div>
+          <h4>Protoboard</h4>
+          <div class="qty">1x Unidade</div>
+          <p>Para testes rápidos antes de soldagem definitiva</p>
+        </div>
+        <div class="comp-card">
+          <div class="comp-icon">🔌</div>
+          <h4>Cabos Jumper</h4>
+          <div class="qty">Vários</div>
+          <p>Diferentes comprimentos para conexões flexíveis</p>
+        </div>
+        <div class="comp-card">
+          <div class="comp-icon">💾</div>
+          <h4>Arduino IDE</h4>
+          <div class="qty">Software</div>
+          <p>Instalado no computador para programação</p>
+          <div class="comp-subtext">Com driver ESP32 configurado</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SOFTWARE -->
+    <div id="software" class="tab-content">
+      <div class="components-grid">
+        <div class="comp-card">
+          <div class="comp-icon">🖥️</div>
+          <h4>Arduino IDE</h4>
+          <div class="qty">No Computador</div>
+          <p>Interface de desenvolvimento para programar o ESP32</p>
+        </div>
+        <div class="comp-card">
+          <div class="comp-icon">🔌</div>
+          <h4>Driver ESP32</h4>
+          <div class="qty">No Computador</div>
+          <p>Permite comunicação entre computador e microcontrolador</p>
+        </div>
+        <div class="comp-card">
+          <div class="comp-icon">📡</div>
+          <h4>Biblioteca BLE</h4>
+          <div class="qty">No Computador</div>
+          <p>Para comunicação Bluetooth Low Energy</p>
+        </div>
+        <div class="comp-card">
+          <div class="comp-icon">📱</div>
+          <h4>App Android</h4>
+          <div class="qty">No Celular</div>
+          <div class="comp-subtext">Integração com Google Maps ou Waze</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CONSTRUÇÃO -->
+    <div id="fases" class="tab-content">
+      <div class="phases-container">
+        <div class="phases-grid">
+          <div class="phase-card">
+            <div class="phase-num">1</div>
+            <h4>Teste Individual</h4>
+            <p>Fazer ESP32 vibrar com botão e testar motor + transistor em protoboard</p>
+          </div>
+          <div class="phase-card">
+            <div class="phase-num">2</div>
+            <h4>BLE Básico</h4>
+            <p>Conectar celular no ESP32 e enviar comandos LEFT / RIGHT manuais</p>
+          </div>
+          <div class="phase-card">
+            <div class="phase-num">3</div>
+            <h4>Integração Maps</h4>
+            <p>Capturar notificações, filtrar "esquerda"/"direita" e enviar via BLE</p>
+          </div>
+          <div class="phase-card">
+            <div class="phase-num">4</div>
+            <h4>Miniaturização</h4>
+            <p>Soldar tudo, case final e ajustar bateria para uso portátil</p>
+          </div>
+        </div>
+
+        <!-- COMANDOS BLE -->
+        <div style="background: linear-gradient(135deg, rgba(78,207,179,0.08) 0%, rgba(74,47,171,0.08) 100%); border-radius: 16px; padding: 2rem; margin-top: 2rem;">
+          <h4 style="font-family: 'Syne', sans-serif; color: var(--text-dark); margin-bottom: 1.5rem; font-size: 1rem; font-weight: 600;">📡 Lógica de Comandos BLE</h4>
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem;">
+            <div>
+              <div style="background: var(--white); padding: 1rem; border-radius: 10px; border-left: 3px solid var(--teal);">
+                <div style="font-weight: 600; color: var(--teal); margin-bottom: 0.5rem;">Comando: LEFT</div>
+                <div style="font-size: 0.85rem; color: var(--text-muted);">Vibra pulseira esquerda - indica virada para esquerda</div>
+              </div>
+            </div>
+            <div>
+              <div style="background: var(--white); padding: 1rem; border-radius: 10px; border-left: 3px solid var(--mid-purple);">
+                <div style="font-weight: 600; color: var(--mid-purple); margin-bottom: 0.5rem;">Comando: RIGHT</div>
+                <div style="font-size: 0.85rem; color: var(--text-muted);">Vibra pulseira direita - indica virada para direita</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SPECS SECTION -->
+    <div class="specs-section">
+      <h3 style="margin-bottom: 0.5rem; font-family: 'Syne', sans-serif; font-weight: 700;">⚡ Autonomia e Performance</h3>
+      <p style="font-size: 0.95rem; color: rgba(255,255,255,0.8); margin-bottom: 1.5rem;">Valores estimados para o protótipo com bateria 500mAh</p>
+      <div class="specs-grid">
+        <div class="spec-item">
+          <div class="spec-value">80 mA</div>
+          <div class="spec-label">Consumo Ativo</div>
+        </div>
+        <div class="spec-item">
+          <div class="spec-value">10 mA</div>
+          <div class="spec-label">Modo Leve</div>
+        </div>
+        <div class="spec-item">
+          <div class="spec-value">4-6h</div>
+          <div class="spec-label">Duração Contínua</div>
+        </div>
+      </div>
+      <p style="font-size: 0.85rem; color: rgba(255,255,255,0.6); margin-top: 1.5rem; text-align: center;">Mais autonomia disponível com deep sleep e otimizações</p>
+    </div>
+
   </div>
 </section>
 
@@ -1421,9 +1876,26 @@
 
 <script>
   const nav = document.getElementById('navbar');
-  window.addEventListener('scroll', () => {B
+  window.addEventListener('scroll', () => {
     nav.classList.toggle('scrolled', window.scrollY > 60);
   });
+
+  // Tabs functionality
+  function switchTab(event, tabName) {
+    // Hide all content
+    const contents = document.querySelectorAll('.tab-content');
+    contents.forEach(content => content.classList.remove('active'));
+    
+    // Remove active class from all buttons
+    const buttons = document.querySelectorAll('.tab-btn');
+    buttons.forEach(btn => btn.classList.remove('active'));
+    
+    // Show selected content
+    document.getElementById(tabName).classList.add('active');
+    
+    // Add active class to clicked button
+    event.target.classList.add('active');
+  }
 </script>
 </body>
 </html>
