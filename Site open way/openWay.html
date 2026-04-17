@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>OpenWay</title>
-<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -24,10 +24,12 @@
   html { scroll-behavior: smooth; }
 
   body {
-    font-family: 'DM Sans', sans-serif;
+    font-family: 'Inter', sans-serif;
     background: var(--white);
     color: var(--text-dark);
     overflow-x: hidden;
+    font-size: 1rem;
+    line-height: 1.6;
   }
 
   /* NAV */
@@ -48,7 +50,7 @@
   }
 
   .nav-logo {
-    font-family: 'Syne', sans-serif;
+    font-family: 'Inter', sans-serif;
     font-size: 1.6rem;
     font-weight: 800;
     color: var(--white);
@@ -57,6 +59,12 @@
   }
 
   .nav-logo span { color: var(--teal); }
+
+  .nav-logo img {
+    height: 40px;
+    width: auto;
+    display: block;
+  }
 
   .nav-links {
     display: flex;
@@ -68,7 +76,7 @@
     color: rgba(255,255,255,0.8);
     text-decoration: none;
     font-size: 0.95rem;
-    font-weight: 400;
+    font-weight: 500;
     letter-spacing: 0.02em;
     transition: color 0.2s;
   }
@@ -142,7 +150,7 @@
     border: 1px solid rgba(78,207,179,0.3);
     color: var(--teal);
     font-size: 0.8rem;
-    font-weight: 500;
+    font-weight: 600;
     letter-spacing: 0.12em;
     text-transform: uppercase;
     padding: 0.4rem 1rem;
@@ -151,9 +159,9 @@
   }
 
   .hero h1 {
-    font-family: 'Syne', sans-serif;
-    font-size: clamp(2.5rem, 5vw, 3.8rem);
-    font-weight: 800;
+    font-family: 'Inter', sans-serif;
+    font-size: clamp(5.8rem, 6vw, 3.8rem);
+    font-weight: 500;
     color: var(--white);
     line-height: 1.1;
     letter-spacing: -0.03em;
@@ -166,8 +174,8 @@
   }
 
   .hero p {
-    font-size: 1.05rem;
-    line-height: 1.75;
+    font-size: 1.1rem;
+    line-height: 1.8;
     color: rgba(255,255,255,0.7);
     margin-bottom: 2.5rem;
     font-weight: 300;
@@ -183,8 +191,8 @@
   .btn-primary {
     background: var(--teal);
     color: var(--deep-purple);
-    font-family: 'DM Sans', sans-serif;
-    font-weight: 500;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
     font-size: 1rem;
     padding: 0.9rem 2rem;
     border-radius: 50px;
@@ -203,7 +211,7 @@
   .btn-outline {
     background: transparent;
     color: var(--white);
-    font-family: 'DM Sans', sans-serif;
+    font-family: 'Inter', sans-serif;
     font-weight: 400;
     font-size: 1rem;
     padding: 0.9rem 2rem;
@@ -242,15 +250,15 @@
   }
 
   .hero-card-stat .num {
-    font-family: 'Syne', sans-serif;
+    font-family: 'Inter', sans-serif;
     font-size: 2.5rem;
-    font-weight: 700;
+    font-weight: 800;
     color: var(--teal);
     line-height: 1;
   }
 
   .hero-card-stat .label {
-    font-size: 0.85rem;
+    font-size: 0.88rem;
     color: rgba(255,255,255,0.5);
     margin-top: 0.3rem;
   }
@@ -302,7 +310,7 @@
   }
 
   .marquee-track span {
-    font-family: 'Syne', sans-serif;
+    font-family: 'Inter', sans-serif;
     font-size: 0.8rem;
     font-weight: 600;
     color: var(--deep-purple);
@@ -327,7 +335,7 @@
 
   .section-eyebrow {
     font-size: 0.75rem;
-    font-weight: 600;
+    font-weight: 700;
     letter-spacing: 0.15em;
     text-transform: uppercase;
     color: var(--teal-dark);
@@ -336,11 +344,11 @@
   }
 
   .section-title {
-    font-family: 'Syne', sans-serif;
-    font-size: clamp(1.75rem, 4vw, 2.5rem);
+    font-family: 'Inter', sans-serif;
+    font-size: clamp(1.8rem, 5vw, 2.8rem);
     font-weight: 700;
     color: var(--text-dark);
-    line-height: 1.2;
+    line-height: 1.25;
     letter-spacing: -0.02em;
     margin-bottom: 0.5rem;
   }
@@ -403,7 +411,7 @@
   .about-img-tag {
     background: var(--teal);
     color: var(--deep-purple);
-    font-family: 'Syne', sans-serif;
+    font-family: 'Inter', sans-serif;
     font-weight: 700;
     font-size: 0.85rem;
     padding: 0.6rem 1.2rem;
@@ -423,9 +431,9 @@
   }
 
   .about-float-card .num {
-    font-family: 'Syne', sans-serif;
+    font-family: 'Inter', sans-serif;
     font-size: 2rem;
-    font-weight: 800;
+    font-weight: 900;
     color: var(--mid-purple);
     line-height: 1;
   }
@@ -438,8 +446,8 @@
 
   .about-content p {
     color: var(--text-muted);
-    font-size: 0.95rem;
-    line-height: 1.8;
+    font-size: 0.98rem;
+    line-height: 1.85;
     margin-top: 1.5rem;
     font-weight: 300;
   }
@@ -471,18 +479,18 @@
   .pillar-icon svg { width: 18px; height: 18px; stroke: var(--teal-dark); fill: none; stroke-width: 2; }
 
   .pillar-text h4 {
-    font-family: 'Syne', sans-serif;
-    font-size: 0.95rem;
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
     font-weight: 700;
     color: var(--text-dark);
     margin-bottom: 0.3rem;
   }
 
   .pillar-text p {
-    font-size: 0.85rem;
+    font-size: 0.88rem;
     color: var(--text-muted);
     margin: 0;
-    line-height: 1.55;
+    line-height: 1.6;
   }
 
   /* SERVICES */
@@ -531,9 +539,9 @@
   .service-card:hover::before { opacity: 1; }
 
   .service-num {
-    font-family: 'Syne', sans-serif;
+    font-family: 'Inter', sans-serif;
     font-size: 0.72rem;
-    font-weight: 700;
+    font-weight: 800;
     letter-spacing: 0.1em;
     color: var(--teal-dark);
     margin-bottom: 1rem;
@@ -541,8 +549,8 @@
   }
 
   .service-card h3 {
-    font-family: 'Syne', sans-serif;
-    font-size: 1.05rem;
+    font-family: 'Inter', sans-serif;
+    font-size: 1.1rem;
     font-weight: 700;
     color: var(--text-dark);
     margin-bottom: 0.6rem;
@@ -550,9 +558,9 @@
   }
 
   .service-card p {
-    font-size: 0.88rem;
+    font-size: 0.9rem;
     color: var(--text-muted);
-    line-height: 1.6;
+    line-height: 1.7;
     font-weight: 300;
   }
 
@@ -611,9 +619,9 @@
   }
 
   .testi-card p {
-    font-size: 0.9rem;
+    font-size: 0.95rem;
     color: rgba(255,255,255,0.75);
-    line-height: 1.7;
+    line-height: 1.8;
     font-weight: 300;
     font-style: italic;
     margin-bottom: 1.5rem;
@@ -633,7 +641,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    font-family: 'Syne', sans-serif;
+    font-family: 'Inter', sans-serif;
     font-size: 0.85rem;
     font-weight: 700;
     color: var(--white);
@@ -641,14 +649,14 @@
   }
 
   .testi-name {
-    font-family: 'Syne', sans-serif;
-    font-size: 0.9rem;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.95rem;
     font-weight: 600;
     color: var(--white);
   }
 
-  .testi-role {
-    font-size: 0.78rem;
+  .testi-roles {
+    font-size: 0.8rem;
     color: rgba(255,255,255,0.45);
     margin-top: 0.1rem;
   }
@@ -666,9 +674,9 @@
   }
 
   .cta-band h2 {
-    font-family: 'Syne', sans-serif;
-    font-size: clamp(1.8rem, 4vw, 2.4rem);
-    font-weight: 800;
+    font-family: 'Inter', sans-serif;
+    font-size: clamp(1.8rem, 5vw, 2.6rem);
+    font-weight: 700;
     color: var(--deep-purple);
     letter-spacing: -0.02em;
     margin-bottom: 1rem;
@@ -677,7 +685,7 @@
 
   .cta-band p {
     color: rgba(45,27,105,0.7);
-    font-size: 1rem;
+    font-size: 1.05rem;
     margin-bottom: 2rem;
     font-weight: 300;
   }
@@ -685,8 +693,8 @@
   .btn-dark {
     background: var(--deep-purple);
     color: var(--white);
-    font-family: 'DM Sans', sans-serif;
-    font-weight: 500;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
     font-size: 1rem;
     padding: 0.9rem 2.5rem;
     border-radius: 50px;
@@ -739,7 +747,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    font-family: 'Syne', sans-serif;
+    font-family: 'Inter', sans-serif;
     font-weight: 800;
     font-size: 1.1rem;
     color: var(--mid-purple);
@@ -747,17 +755,17 @@
   }
 
   .step h4 {
-    font-family: 'Syne', sans-serif;
-    font-size: 0.95rem;
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
     font-weight: 700;
     color: var(--text-dark);
     margin-bottom: 0.5rem;
   }
 
   .step p {
-    font-size: 0.85rem;
+    font-size: 0.88rem;
     color: var(--text-muted);
-    line-height: 1.55;
+    line-height: 1.6;
     font-weight: 300;
   }
 
@@ -772,9 +780,9 @@
   }
 
   .contact-info p {
-    font-size: 0.95rem;
+    font-size: 0.98rem;
     color: var(--text-muted);
-    line-height: 1.8;
+    line-height: 1.85;
     margin-top: 1.25rem;
     font-weight: 300;
   }
@@ -790,7 +798,7 @@
     display: flex;
     align-items: center;
     gap: 0.75rem;
-    font-size: 0.9rem;
+    font-size: 0.95rem;
     color: var(--text-dark);
   }
 
@@ -833,8 +841,8 @@
     padding: 0.8rem 1rem;
     border: 1.5px solid #E8E0F5;
     border-radius: 10px;
-    font-family: 'DM Sans', sans-serif;
-    font-size: 0.9rem;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.95rem;
     color: var(--text-dark);
     background: var(--off-white);
     transition: border-color 0.2s;
@@ -866,7 +874,7 @@
   }
 
   .footer-brand .logo {
-    font-family: 'Syne', sans-serif;
+    font-family: 'Inter', sans-serif;
     font-size: 1.5rem;
     font-weight: 800;
     color: var(--white);
@@ -889,7 +897,7 @@
   }
 
   .footer-col h5 {
-    font-family: 'Syne', sans-serif;
+    font-family: 'Inter', sans-serif;
     font-size: 0.8rem;
     font-weight: 600;
     letter-spacing: 0.1em;
@@ -938,8 +946,8 @@
     padding: 0.9rem 1.5rem;
     background: none;
     border: none;
-    font-family: 'Syne', sans-serif;
-    font-size: 0.9rem;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.95rem;
     font-weight: 700;
     color: var(--text-muted);
     cursor: pointer;
@@ -991,12 +999,12 @@
   }
 
   .comp-card h4 {
-    font-family: 'Syne', sans-serif;
-    font-size: 0.95rem;
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
     font-weight: 700;
     color: var(--text-dark);
     margin-bottom: 0.4rem;
-    line-height: 1.3;
+    line-height: 1.4;
     min-height: 2.4rem;
     display: flex;
     align-items: center;
@@ -1013,9 +1021,9 @@
   }
 
   .comp-card p {
-    font-size: 0.85rem;
+    font-size: 0.88rem;
     color: var(--text-muted);
-    line-height: 1.55;
+    line-height: 1.6;
     margin: 0;
   }
 
@@ -1058,7 +1066,7 @@
   }
 
   .phase-num {
-    font-family: 'Syne', sans-serif;
+    font-family: 'Inter', sans-serif;
     font-size: 2rem;
     font-weight: 800;
     background: linear-gradient(135deg, var(--teal), var(--mid-purple));
@@ -1069,17 +1077,17 @@
   }
 
   .phase-card h4 {
-    font-family: 'Syne', sans-serif;
-    font-size: 0.95rem;
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
     font-weight: 700;
     color: var(--text-dark);
     margin-bottom: 0.75rem;
   }
 
   .phase-card p {
-    font-size: 0.85rem;
+    font-size: 0.88rem;
     color: var(--text-muted);
-    line-height: 1.55;
+    line-height: 1.6;
     margin: 0;
   }
 
@@ -1104,7 +1112,7 @@
   }
 
   .spec-value {
-    font-family: 'Syne', sans-serif;
+    font-family: 'Inter', sans-serif;
     font-size: 2rem;
     font-weight: 800;
     color: var(--teal-light);
@@ -1112,7 +1120,7 @@
   }
 
   .spec-label {
-    font-size: 0.9rem;
+    font-size: 0.95rem;
     color: rgba(255,255,255,0.7);
     font-weight: 300;
   }
@@ -1154,7 +1162,7 @@
 
 <!-- NAV -->
 <nav id="navbar">
-  <div class="nav-logo">Open<span>Way</span></div>
+  <a href="#" class="nav-logo"><img src="images/logo.PNG" alt="OpenWay"></a>
   <ul class="nav-links">
     <li><a href="#about">Sobre</a></li>
     <li><a href="#services">Serviços</a></li>
